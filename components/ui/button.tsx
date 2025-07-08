@@ -10,8 +10,7 @@ import { cx, focusRing } from "@/lib/utils"
 const buttonVariants = tv({
   base: [
     // base
-    "h-8 relative inline-flex items-center justify-center whitespace-nowrap rounded-lg border px-3 py-2",
-    "text-center text-base/6 font-semibold shadow-xs transition-all duration-100 ease-in-out",
+    "relative inline-flex items-center justify-center whitespace-nowrap rounded-xl border px-3 py-2 text-center text-sm font-medium shadow-xs transition-all duration-100 ease-in-out",
     // disabled
     "disabled:pointer-events-none disabled:shadow-none",
     // focus
@@ -23,24 +22,24 @@ const buttonVariants = tv({
         // border
         "border-transparent",
         // text color
-        "text-accent-contrast",
+        "text-white dark:text-white",
         // background color
-        "bg-accent-bold",
+        "bg-blue-500 dark:bg-blue-500",
         // hover color
-        "hover:bg-accent-bold-hover",
+        "hover:bg-blue-600 dark:hover:bg-blue-600",
         // disabled
         "disabled:bg-blue-300 disabled:text-white",
         "dark:disabled:bg-blue-800 dark:disabled:text-blue-400",
       ],
       secondary: [
         // border
-        "border-brd-control",
+        "border-gray-300 dark:border-gray-800",
         // text color
-        "text-cnt-primary",
+        "text-gray-900 dark:text-gray-50",
         // background color
-        "bg-page",
+        "bg-white dark:bg-gray-950",
         //hover color
-        "hover:bg-gray-4",
+        "hover:bg-gray-50 dark:hover:bg-gray-900/60",
         // disabled
         "disabled:text-gray-400",
         "dark:disabled:text-gray-600",
@@ -75,13 +74,13 @@ const buttonVariants = tv({
       ],
       destructive: [
         // text color
-        "text-(--red-contrast)",
+        "text-white",
         // border
         "border-transparent",
         // background color
-        "bg-(--red-10)",
+        "bg-red-600 dark:bg-red-700",
         // hover color
-        "hover:bg-(--red-9)",
+        "hover:bg-red-700 dark:hover:bg-red-600",
         // disabled
         "disabled:bg-red-300 disabled:text-white",
         "dark:disabled:bg-red-950 dark:disabled:text-red-400",

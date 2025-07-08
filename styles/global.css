@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import "./theme/tokens/fonts.css";
 @import "./theme/tokens/colors.css";
 @import "./theme/tokens/scaling.css";
 @import "./theme/tokens/radius.css";
@@ -139,6 +140,9 @@
 }
 
 @theme {
+  /* Font family */
+  --font-sans: var(--ds-sans-font);
+  /* Border radius */
   --radius-xs: var(--radius-1);
   --radius-sm: var(--radius-2);
   --radius-md: var(--radius-3);

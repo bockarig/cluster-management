@@ -123,7 +123,7 @@ export const Comparison: Story = {
   render: (args) => (
     <div className="grid grid-cols-2 gap-x-8 p-3 ring-1 ring-brd-line rounded-md">
       <div className="space-y-2">
-        <p className="text-xs text-cnt-tertiary flex justify-center">Tremor UI</p>
+        <p className="text-sm font-medium text-cnt-secondary flex justify-center">Tremor UI</p>
         <Panel {...args}>
           <header>
             <h2>Notifications</h2>
@@ -146,7 +146,7 @@ export const Comparison: Story = {
         </Panel>
       </div>
       <div className="space-y-2">
-        <p className="text-xs text-cnt-tertiary flex justify-center">Shadcn UI</p>
+        <p className="text-sm font-medium text-cnt-secondary flex justify-center">Shadcn UI</p>
         <Card {...args}>
           <CardHeader>
             <CardTitle>Notifications</CardTitle>
@@ -163,7 +163,7 @@ export const Comparison: Story = {
               </div>
             ))}
           </CardContent>
-          <CardFooter className="justify-center">
+          <CardFooter className="">
             <Button variant="destructive">Cancel Subscription</Button>
           </CardFooter>
         </Card>

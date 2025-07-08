@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { withThemeByClassName } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/react-vite"
 
+import "@fontsource-variable/sora"
 import "@/styles/global.css"
 
 const preview: Preview = {
@@ -17,7 +18,7 @@ const preview: Preview = {
 
 const DEFAULT_GRAY_COLOR = "slate"
 const DEFAULT_ACCENT_COLOR = "cyan"
-const DEFAULT_RADIUS = "medium"
+const DEFAULT_RADIUS = "tiny"
 const DEFAULT_SCALING = "100%"
 
 const withThemeProvider = (Story, { parameters }) => {
@@ -29,7 +30,7 @@ const withThemeProvider = (Story, { parameters }) => {
   } = parameters
   useEffect(() => {
     // Ensure the theme is set to light on an initial load
-    document.documentElement.classList.add("creightit")
+    document.documentElement.classList.add("creightit", "antialiased")
     document.documentElement.setAttribute("data-gray-color", grayColor)
     document.documentElement.setAttribute("data-accent-color", accentColor)
 

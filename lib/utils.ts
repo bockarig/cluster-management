@@ -38,6 +38,10 @@ export const hasErrorInput = [
   "ring-red-200 dark:ring-red-700/30",
 ]
 
+export const control = [
+  // base
+]
+
 export const colors = {
   "dark/zinc": [
     "text-white [--btn-bg:var(--color-zinc-900)] [--btn-border:var(--color-zinc-950)]/90 [--btn-hover-overlay:var(--color-white)]/10",
