@@ -8,15 +8,15 @@ const selectNativeStyles = tv({
     // base
     "h-8 peer w-full cursor-pointer appearance-none truncate rounded-md border py-0.5 pl-3 pr-7 shadow-xs [--tw-shadow-color:var(--color-black-a4)] outline-hidden transition-all sm:text-sm",
     // background color
-    "bg-white dark:bg-gray-950",
+    "bg-main",
     // border color
-    "border-gray-300 dark:border-gray-800",
+    "border-brd-control",
     // text color
-    "text-gray-900 dark:text-gray-50",
+    "text-cnt-primary",
     // placeholder color
-    "placeholder-gray-400 dark:placeholder-gray-500",
+    "placeholder-cnt-tertiary",
     // hover
-    "hover:bg-gray-50 dark:hover:bg-gray-950/50",
+    "hover:bg-gray-4",
     // disabled
     "disabled:pointer-events-none",
     "disabled:bg-gray-100 disabled:text-gray-400",
