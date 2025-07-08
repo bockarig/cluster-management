@@ -5,12 +5,13 @@ import { Slot } from "@radix-ui/react-slot"
 import { RiLoader2Fill } from "@remixicon/react"
 import { tv, type VariantProps } from "tailwind-variants"
 
-import { cx, focusRing } from "@/lib/utils"
+import { control, cx, focusRing } from "@/lib/utils"
 
 const buttonVariants = tv({
   base: [
     // base
-    "relative inline-flex items-center justify-center whitespace-nowrap rounded-xl border px-3 py-2",
+    control,
+    "relative inline-flex items-center justify-center whitespace-nowrap border",
     "text-center text-base/6 font-semibold shadow-sm [--tw-shadow-color:var(--color-black-a3)] lg:transition-all lg:duration-100 lg:ease-in-out",
     // disabled
     "disabled:pointer-events-none disabled:shadow-none",
@@ -25,7 +26,7 @@ const buttonVariants = tv({
         // text color
         "text-accent-contrast",
         // shadow
-        "[--tw-shadow-color:var(--color-black-a6)]",
+        "[--tw-shadow-color:var(--color-black-a5)]",
         // background color
         "bg-accent-10",
         // hover color
@@ -80,7 +81,7 @@ const buttonVariants = tv({
         // border
         "border-transparent",
         // shadow
-        "[--tw-shadow-color:var(--color-black-a6)]",
+        "[--tw-shadow-color:var(--color-black-a5)]",
         // background color
         "bg-(--red-10)",
         // hover color

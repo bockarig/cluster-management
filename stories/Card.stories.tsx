@@ -164,7 +164,7 @@ export const Comparison: Story = {
             ))}
           </CardContent>
           <CardFooter className="">
-            <Button variant="destructive">Cancel Subscription</Button>
+            <Button variant="danger">Cancel Subscription</Button>
           </CardFooter>
         </Card>
       </div>

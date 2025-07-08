@@ -39,7 +39,20 @@ export const hasErrorInput = [
 ]
 
 export const control = [
-  // base
+  // tokens
+  "[--control-gap:--spacing(2)]",
+  "[--control-box-height:--spacing(5)]",
+  "[--control-block-padding:--spacing(1.5)]",
+  "[--control-inline-padding:--spacing(3)]",
+  "[--control-height:--spacing(8)]",
+  "[--control-radius:var(--radius-xl)]",
+  // sizing
+  "h-(--control-height)",
+  "gap-x--(--control-gap)",
+  "leading-(--control-box-height)",
+  "px-(--control-inline-padding)",
+  "py-(--control-block-padding)",
+  "rounded-(--control-radius)",
 ]
 
 export const colors = {
