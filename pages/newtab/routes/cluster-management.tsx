@@ -1,5 +1,23 @@
-import { Card } from "@/components/ui/card"
+import { useState } from "react"
+import {
+  AlertTriangle,
+  Clock,
+  MessageSquare,
+  Package,
+  RefreshCw,
+  TrendingDown,
+  TrendingUp,
+  Users,
+} from "lucide-react"
+
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
 import { SelectNative } from "@/components/ui/select-native"
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Textarea } from "@/components/ui/textarea"
 import { ContentPlaceholder } from "@/components/content-placeholder"
 
 export const ClusterManagement = () => (
