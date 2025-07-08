@@ -153,6 +153,27 @@ function generateLaneData(cluster: string) {
   return lanes
 }
 
+function isLaneInAssignment(laneId: string, assignment: string): boolean {
+  // Parse assignment like "A1-A4" or "A7-A13"
+  const assignmentMatch = assignment.match(/([A-Z])(\d+)-([A-Z])(\d+)/)
+  if (!assignmentMatch) return false
+
+  const [, startCluster, startNum, endCluster, endNum] = assignmentMatch
+  const startNumber = Number.parseInt(startNum)
+  const endNumber = Number.parseInt(endNum)
+
+  // Parse lane ID like "A1-A2" or "B5-B6"
+  const laneMatch = laneId.match(/([A-Z])(\d+)-([A-Z])(\d+)/)
+  if (!laneMatch) return false
+
+  const [, laneCluster, laneStart, , laneEnd] = laneMatch
+  const laneStartNum = Number.parseInt(laneStart)
+  const laneEndNum = Number.parseInt(laneEnd)
+
+  // Check if lane cluster matches and lane numbers fall within assignment range
+  return laneCluster === startCluster && laneStartNum >= startNumber && laneEndNum <= endNumber
+}
+
 export const ClusterManagement = () => (
   <div className="p-4 sm:p-6 lg:p-8">
     <header>
