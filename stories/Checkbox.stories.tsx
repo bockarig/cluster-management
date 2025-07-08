@@ -1,13 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
 import { fn } from "storybook/test"
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select.tsx"
+import { Checkbox } from "@/components/ui/checkbox.tsx"
+import { Label } from "@/components/ui/label.tsx"
 
 const data = [
   {
@@ -33,29 +28,24 @@ const data = [
 ]
 
 const meta = {
-  title: "UI/Select",
-  component: Select,
+  title: "UI/Checkbox",
+  component: Checkbox,
   tags: ["autodocs"],
   argTypes: {},
   args: {},
-} satisfies Meta<typeof Select>
+} satisfies Meta<typeof Checkbox>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
+  parameters: {
+    layout: "centered",
+  },
   render: (args) => (
-    <Select {...args}>
-      <SelectTrigger>
-        <SelectValue placeholder="Select" />
-      </SelectTrigger>
-      <SelectContent>
-        {data.map((item) => (
-          <SelectItem key={item.value} value={item.value}>
-            {item.label}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
+    <div className="flex items-center justify-center gap-2">
+      <Checkbox id="r1" />
+      <Label htmlFor="r1">I'd like to be notified by SMS.</Label>
+    </div>
   ),
 }
