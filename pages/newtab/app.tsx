@@ -1,3 +1,4 @@
+import { PickAndStage } from "@/pages/newtab/routes/pick-and-stage.tsx"
 import { createMemoryRouter, RouterProvider } from "react-router"
 
 import { RootLayout } from "./layouts/root-layout.tsx"
@@ -11,6 +12,10 @@ const router = createMemoryRouter([
       {
         index: true,
         Component: ClusterManagement,
+      },
+      {
+        path: "/pick-and-stage",
+        Component: PickAndStage,
       },
     ],
   },

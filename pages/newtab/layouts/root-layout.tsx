@@ -1,5 +1,5 @@
 import React from "react"
-import { Outlet } from "react-router"
+import { NavLink, Outlet } from "react-router"
 
 import { cx } from "@/lib/utils.ts"
 import { Logo } from "@/components/logo.tsx"
@@ -7,9 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider.tsx"
 import { ThemeToggle } from "@/components/theme-toggle.tsx"
 
 const navigation = [
-  { name: "Cluster Owner", href: "#", current: true },
-  { name: "Pick & Stage", href: "#", current: false },
-  { name: "Notes", href: "#", current: false },
+  { name: "Cluster Owner", href: "/", current: true },
+  { name: "Pick & Stage", href: "/pick-and-stage", current: false },
+  { name: "Notes", href: "/notes", current: false },
 ]
 
 export const RootLayout = () => {
@@ -26,19 +26,21 @@ export const RootLayout = () => {
               </div>
               <nav className="-mb-px flex space-x-6" aria-label="Tabs">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
-                    className={cx(
-                      item.current
-                        ? "border-accent-9 text-accent-9"
-                        : "border-transparent text-cnt-secondary hover:border-brd-control hover:text-cnt-primary",
-                      "inline-flex items-center whitespace-nowrap border-b-2 px-2 text-sm font-medium"
-                    )}
+                    to={item.href}
+                    className={({ isActive }) =>
+                      cx(
+                        isActive
+                          ? "border-accent-9 text-accent-9"
+                          : "border-transparent text-cnt-secondary hover:border-brd-control hover:text-cnt-primary",
+                        "inline-flex items-center whitespace-nowrap border-b-2 px-2 text-sm font-medium"
+                      )
+                    }
                     aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </nav>
             </div>

@@ -2,11 +2,11 @@ import { Card } from "@/components/ui/card"
 import { SelectNative } from "@/components/ui/select-native"
 import { ContentPlaceholder } from "@/components/content-placeholder"
 
-export const ClusterManagement = () => (
+export const PickAndStage = () => (
   <div className="p-4 sm:p-6 lg:p-8">
     <header>
       <div className="sm:flex sm:items-center sm:justify-between">
-        <h3 className="text-lg font-semibold">Cluster Overiew</h3>
+        <h3 className="text-lg font-semibold">Pick & Stage</h3>
         <div className="mt-4 items-center sm:mt-0 sm:flex sm:space-x-2">
           <SelectNative className="w-full sm:w-fit" defaultValue="1">
             <option value="1">Today</option>
