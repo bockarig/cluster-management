@@ -38,9 +38,14 @@ export const Secondary: Story = {
   },
 }
 
-export const Destructive: Story = {
+export const Danger: Story = {
   args: {
-    variant: "destructive",
+    variant: "danger",
+  },
+}
+export const Disabled: Story = {
+  args: {
+    disabled: "true",
   },
 }
 
