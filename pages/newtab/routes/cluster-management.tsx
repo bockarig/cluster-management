@@ -20,6 +20,139 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { ContentPlaceholder } from "@/components/content-placeholder"
 
+const clusterData = {
+  AB: {
+    clusters: ["A", "B"],
+    stowers: [
+      {
+        id: "S001",
+        name: "John Smith",
+        assignment: "A1-A4",
+        currentRate: 85,
+        target: 90,
+        status: "below",
+      },
+      {
+        id: "S002",
+        name: "Maria Garcia",
+        assignment: "A5-A8",
+        currentRate: 95,
+        target: 90,
+        status: "above",
+      },
+      {
+        id: "S003",
+        name: "David Chen",
+        assignment: "B1-B4",
+        currentRate: 88,
+        target: 90,
+        status: "below",
+      },
+      {
+        id: "S004",
+        name: "Sarah Johnson",
+        assignment: "B5-B8",
+        currentRate: 92,
+        target: 90,
+        status: "above",
+      },
+    ],
+    buffers: [
+      {
+        id: "B001",
+        name: "Mike Wilson",
+        assignment: "A1-A6",
+        performance: "good",
+        notes: "Consistent catch rate",
+      },
+      {
+        id: "B002",
+        name: "Lisa Brown",
+        assignment: "A7-A13",
+        performance: "attention",
+        notes: "Missed 3 packages in last hour",
+      },
+      { id: "B003", name: "Tom Davis", assignment: "B1-B6", performance: "good", notes: "" },
+      {
+        id: "B004",
+        name: "Anna Lee",
+        assignment: "B7-B13",
+        performance: "excellent",
+        notes: "Zero misses today",
+      },
+    ],
+    lanes: generateLaneData("A").concat(generateLaneData("B")),
+    volume: { current: 1250, capacity: 1500, trend: "up" },
+  },
+  CD: {
+    clusters: ["C", "D"],
+    stowers: [
+      {
+        id: "S005",
+        name: "Robert Kim",
+        assignment: "C1-C4",
+        currentRate: 91,
+        target: 90,
+        status: "above",
+      },
+      {
+        id: "S006",
+        name: "Jennifer Wu",
+        assignment: "C5-C8",
+        currentRate: 87,
+        target: 90,
+        status: "below",
+      },
+      {
+        id: "S007",
+        name: "Carlos Rodriguez",
+        assignment: "D1-D4",
+        currentRate: 93,
+        target: 90,
+        status: "above",
+      },
+      {
+        id: "S008",
+        name: "Emily Taylor",
+        assignment: "D5-D8",
+        currentRate: 89,
+        target: 90,
+        status: "below",
+      },
+    ],
+    buffers: [
+      { id: "B005", name: "Kevin Park", assignment: "C1-C6", performance: "good", notes: "" },
+      { id: "B006", name: "Rachel Green", assignment: "C7-C13", performance: "good", notes: "" },
+      {
+        id: "B007",
+        name: "James Miller",
+        assignment: "D1-D6",
+        performance: "attention",
+        notes: "Slow on peak hours",
+      },
+      { id: "B008", name: "Sophie Anderson", assignment: "D7-D13", performance: "good", notes: "" },
+    ],
+    lanes: generateLaneData("C").concat(generateLaneData("D")),
+    volume: { current: 980, capacity: 1500, trend: "stable" },
+  },
+}
+
+function generateLaneData(cluster: string) {
+  const lanes = []
+  for (let i = 1; i <= 13; i++) {
+    const aisle1 = i * 2 - 1
+    const aisle2 = i * 2
+    lanes.push({
+      id: `${cluster}${aisle1}-${cluster}${aisle2}`,
+      cluster,
+      volume: Math.floor(Math.random() * 50) + 20,
+      capacity: 80,
+      status: Math.random() > 0.8 ? "high" : Math.random() > 0.6 ? "medium" : "normal",
+    })
+  }
+  return lanes
+}
+
 export const ClusterManagement = () => (
   <div className="p-4 sm:p-6 lg:p-8">
     <header>
