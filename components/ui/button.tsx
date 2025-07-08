@@ -10,8 +10,8 @@ import { cx, focusRing } from "@/lib/utils"
 const buttonVariants = tv({
   base: [
     // base
-    "relative inline-flex items-center justify-center whitespace-nowrap rounded-md border px-3 py-2",
-    "text-center text-sm font-medium shadow-xs transition-all duration-100 ease-in-out",
+    "h-8 relative inline-flex items-center justify-center whitespace-nowrap rounded-lg border px-3 py-2",
+    "text-center text-base/6 font-semibold shadow-xs transition-all duration-100 ease-in-out",
     // disabled
     "disabled:pointer-events-none disabled:shadow-none",
     // focus
@@ -23,24 +23,24 @@ const buttonVariants = tv({
         // border
         "border-transparent",
         // text color
-        "text-white dark:text-white",
+        "text-accent-contrast",
         // background color
-        "bg-blue-500 dark:bg-blue-500",
+        "bg-accent-bold",
         // hover color
-        "hover:bg-blue-600 dark:hover:bg-blue-600",
+        "hover:bg-accent-bold-hover",
         // disabled
         "disabled:bg-blue-300 disabled:text-white",
         "dark:disabled:bg-blue-800 dark:disabled:text-blue-400",
       ],
       secondary: [
         // border
-        "border-gray-300 dark:border-gray-800",
+        "border-brd-control",
         // text color
-        "text-gray-900 dark:text-gray-50",
+        "text-cnt-primary",
         // background color
-        "bg-white dark:bg-gray-950",
+        "bg-page",
         //hover color
-        "hover:bg-gray-50 dark:hover:bg-gray-900/60",
+        "hover:bg-gray-4",
         // disabled
         "disabled:text-gray-400",
         "dark:disabled:text-gray-600",
@@ -75,13 +75,13 @@ const buttonVariants = tv({
       ],
       destructive: [
         // text color
-        "text-white",
+        "text-(--red-contrast)",
         // border
         "border-transparent",
         // background color
-        "bg-red-600 dark:bg-red-700",
+        "bg-(--red-10)",
         // hover color
-        "hover:bg-red-700 dark:hover:bg-red-600",
+        "hover:bg-(--red-9)",
         // disabled
         "disabled:bg-red-300 disabled:text-white",
         "dark:disabled:bg-red-950 dark:disabled:text-red-400",

@@ -48,6 +48,7 @@ export const WithCustomTheme: Story = {
   parameters: {
     grayColor: "sage",
     accentColor: "lime",
+    radius: "none",
   },
 }
 

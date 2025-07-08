@@ -16,15 +16,25 @@ const preview: Preview = {
 }
 
 const DEFAULT_GRAY_COLOR = "slate"
-const DEFAULT_ACCENT_COLOR = "sky"
+const DEFAULT_ACCENT_COLOR = "cyan"
+const DEFAULT_RADIUS = "medium"
+const DEFAULT_SCALING = "100%"
 
 const withThemeProvider = (Story, { parameters }) => {
-  const { grayColor = DEFAULT_GRAY_COLOR, accentColor = DEFAULT_ACCENT_COLOR } = parameters
+  const {
+    grayColor = DEFAULT_GRAY_COLOR,
+    accentColor = DEFAULT_ACCENT_COLOR,
+    radius = DEFAULT_RADIUS,
+    scaling = DEFAULT_SCALING,
+  } = parameters
   useEffect(() => {
     // Ensure the theme is set to light on initial load
     document.documentElement.classList.add("creightit")
     document.documentElement.setAttribute("data-gray-color", grayColor)
     document.documentElement.setAttribute("data-accent-color", accentColor)
+
+    document.documentElement.setAttribute("data-scaling", scaling)
+    document.documentElement.setAttribute("data-radius", radius)
   }, [])
 
   return <Story />
