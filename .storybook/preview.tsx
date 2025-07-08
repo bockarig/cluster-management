@@ -28,7 +28,7 @@ const withThemeProvider = (Story, { parameters }) => {
     scaling = DEFAULT_SCALING,
   } = parameters
   useEffect(() => {
-    // Ensure the theme is set to light on initial load
+    // Ensure the theme is set to light on an initial load
     document.documentElement.classList.add("creightit")
     document.documentElement.setAttribute("data-gray-color", grayColor)
     document.documentElement.setAttribute("data-accent-color", accentColor)

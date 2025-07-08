@@ -5,7 +5,8 @@
 /* * * * * * * * * * * * * * * * * * * */
 
 :where(.creightit) {
-  --ds-background: white;
+  /*--ds-background: white;*/
+  --ds-background: var(--gray-2);
   --ds-overlay: var(--black-a6);
   --ds-panel-solid: white;
   --ds-panel-translucent: rgba(255, 255, 255, 0.7);

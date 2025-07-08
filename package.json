@@ -1,5 +1,5 @@
 {
-  "name": "wxt-react-starter",
+  "name": "cluster-manager",
   "description": "manifest.json description",
   "private": true,
   "version": "0.0.0",
@@ -17,6 +17,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "@radix-ui/react-slot": "^1.2.3",
     "@remixicon/react": "^4.6.0",
     "react": "^19.1.0",
