@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "./tokens/colors.css";
-@import "./tokens/radius.css";
-@import "./creightit-themes.css";
-@import "./theme.css";
+
+@import "./theme/tokens/colors.css";
+@import "./theme/tokens/scaling.css";
+@import "./theme/tokens/radius.css";
+@import "./theme/palette.css";
+@import "./theme/theme-utils.css";
 
 @plugin "@tailwindcss/forms";
 
@@ -128,8 +130,11 @@
 
 /* CUSTOM */
 @layer base {
+  * {
+    border-color: var(--color-brd-line);
+  }
   html, body {
-    @apply dark:bg-page;
+    @apply bg-page;
   }
 }
 

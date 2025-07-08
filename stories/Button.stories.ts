@@ -3,8 +3,8 @@ import { fn } from "storybook/test"
 
 import { Button } from "@/components/ui/button"
 
-import "@/styles/scales/sage.css"
-import "@/styles/scales/lime.css"
+import "@/styles/theme/colors/sage.css"
+import "@/styles/theme/colors/lime.css"
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {

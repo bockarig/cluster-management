@@ -1,12 +1,18 @@
+/* Base colors*/
 @import "@radix-ui/colors/black-alpha.css";
 @import "@radix-ui/colors/white-alpha.css";
 
-@import "../scales/slate.css";
-@import "../scales/cyan.css";
-@import "../scales/green.css";
-@import "../scales/red.css";
-@import "../scales/amber.css";
-@import "../scales/orange.css";
+/* Theme */
+@import "../colors/slate.css";
+@import "../colors/cyan.css";
+
+/* Support colors */
+@import "../colors/green.css";
+@import "../colors/red.css";
+@import "../colors/amber.css";
+@import "../colors/orange.css";
+
+/* Design Tokens */
 
 :root {
   /** Base Tokens **/

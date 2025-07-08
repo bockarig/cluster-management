@@ -13,8 +13,8 @@
   --color-cnt-danger: var(--cnt-danger);
 
   /* Backgrounds */
-  --color-main: var(--bg-main);
-  --color-soft: var(--bg-soft);
+  --color-main: var(--ds-panel-solid);
+  --color-soft: var(--ds-surface);
 
   --color-accent-soft: var(--bg-accent-soft);
   --color-info-soft: var(--bg-info-soft);
@@ -40,7 +40,7 @@
   --color-brd-danger: var(--brd-danger);
 
   /* Page Backgrounds */
-  --color-page: var(--pagebg-main);
+  --color-page: var(--ds-background);
   --color-page-alternative: var(--pagebg-alternative);
 
   /* -———————————————————————————————————————————- */

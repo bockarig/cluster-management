@@ -33,6 +33,7 @@ const withThemeProvider = (Story, { parameters }) => {
     document.documentElement.setAttribute("data-gray-color", grayColor)
     document.documentElement.setAttribute("data-accent-color", accentColor)
 
+    document.documentElement.setAttribute("data-is-root-theme", "true")
     document.documentElement.setAttribute("data-scaling", scaling)
     document.documentElement.setAttribute("data-radius", radius)
   }, [])
