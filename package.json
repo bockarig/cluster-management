@@ -19,6 +19,7 @@
   "dependencies": {
     "@fontsource-variable/sora": "^5.2.6",
     "@phosphor-icons/react": "^2.1.10",
+    "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-slot": "^1.2.3",
     "@remixicon/react": "^4.6.0",
     "react": "^19.1.0",
